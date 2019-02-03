@@ -36,6 +36,6 @@ List of API's
 About the Application: 
 
 
-* I have used redis as a persistent cache storage. Rails is key-value store and it has built-in store for data structures like        list,hashes and it can persist the data. One can start the server by running the command redis-server.
+* Here, redis has been used as a persistent cache storage. Redis is key-value store and it has built-in store for data structures like list,hashes and it can persist the data. One can start the server by running the command redis-server.
 
-* Once we translate a new text by giving the appropriate the target language, i am storing the translated text in the cache. Then , if one tries to translate the same text with the same targeted language as before, am fetching the text from the cache.
+* Once we translate a new text by giving the appropriate the target language, application stores the translated text in the cache. Then , if one tries to translate the same text with the same targeted language as before, then the text is been fetched from the cache.
