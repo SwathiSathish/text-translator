@@ -39,3 +39,6 @@ About the Application:
 * Here, redis has been used as a persistent cache storage. Redis is key-value store and it has built-in store for data structures like list,hashes and it can persist the data. One can start the server by running the command redis-server.
 
 * Once we translate a new text by giving the appropriate the target language, application stores the translated text in the cache. Then , if one tries to translate the same text with the same targeted language as before, then the text is been fetched from the cache.
+
+
+* For Smart pre caching, as per the requirenment, I would like to share my thoughts. If a user translates a text into kannada, he is likely to also translate the same text to hindi. For this, we might have to get the user's location. Based on that, we could get the regional languages. Once we get the languages, the text can be converted to respective languages and stored in the cache.
