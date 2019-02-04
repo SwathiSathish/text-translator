@@ -6,7 +6,7 @@ class TranslatorController < ApplicationController
   	text = params[:text]
   	target =  params[:target]
   	find_in_cache = $redis.get('translate')
-  	if JSON.parse(find_in_cache)["to"] == params[:target]
+  	if find_in_cache.present? && JSON.parse(find_in_cache)["to"] == params[:target]
   		render json: {data: JSON.parse(find_in_cache), message: "Fetching from cache"}, status: :ok
 	else
 		translation = translate.translate text, to: target 
